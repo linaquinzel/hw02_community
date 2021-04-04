@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% for post in posts %}
+    <title>Записи сообщества {{ post.group }} | Yatube</title>
+  </head>
+  <body>
+    <h1>{{ post.author }}</h1>
+    <p>
+        {{ post.description }}
+    </p>
+    {% for post in posts %}
+    <h3>
+        Автор: {{ post.author }}, дата публикации: {{ post.pub_date|date:"d M Y" }}
+    </h3>
+    <p>{{ post.text }}</p>
+    {% endfor %}
+    <hr>
+  </body>
+</html>
