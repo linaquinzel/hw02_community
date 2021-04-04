@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
-from .models import Post
+from .models import Post, Group
 
 def index(request):
     latest = Post.objects.order_by("-pub_date")[:11]
@@ -14,4 +14,4 @@ def group_posts(request, slug):
     # Метод .filter позволяет ограничить поиск по критериям. Это аналог добавления
     # условия WHERE group_id = {group_id}
     posts = Post.objects.filter(group=group).order_by("-pub_date")[:12]
-    return render(request, "group.html", {"group": group, "posts": posts})
+    return render(request, "group.html", {"groups": group, "posts": posts})

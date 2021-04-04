@@ -7,10 +7,11 @@
     <title>Записи сообщества {{ post.group }} | Yatube</title>
   </head>
   <body>
-    <h1>{{ post.author }}</h1>
-    <p>
-        {{ post.description }}
-    </p>
+    <h1>{{ post.group }}</h1>
+    {% endfor %}
+    {% for group in groups %}
+    <p>{{ group.description }}</p>
+    {% endfor %}
     {% for post in posts %}
     <h3>
         Автор: {{ post.author }}, дата публикации: {{ post.pub_date|date:"d M Y" }}
