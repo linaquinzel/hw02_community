@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 <!doctype html>
 <html>
   <head>
@@ -6,7 +7,7 @@
     <title>Записи сообщества {{ group }} | Yatube</title>
   </head>
   <body>
-    {% extends "base.html" %}
+    
     {% for post in posts %}
     <h1>{{ group }}</h1>
     <p>{{ description }}</p>
