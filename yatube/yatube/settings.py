@@ -13,7 +13,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'posts',
-    'static',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
