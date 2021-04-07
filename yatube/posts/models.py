@@ -12,8 +12,8 @@ class Post(models.Model):
     author = models.ForeignKey(User, verbose_name="author",
                                on_delete=models.CASCADE)
     group = models.ForeignKey("Group", on_delete=models.SET_NULL,
-                              blank=True, null=True, to_field='id',
-                              related_name="posts_unique")
+                              blank=True, null=True,
+                              related_name="posts")
 
     class Meta:
         verbose_name = "Пост"

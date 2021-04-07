@@ -145,7 +145,5 @@ dmypy.json
 
 .mypy_cache
 static/
-.static
 yatube/static/
 yatube/posts/static/
-static
